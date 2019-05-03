@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="dev" default="/dev/ttyUSB0" /> 
+  <arg name="laser_frame" default="/laser" /> 
+
+  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
+    <param name="port" value="$(arg dev)"/>
+    <param name="frame_id" value="$(arg laser_frame)"/>
+  </node>
+</launch>

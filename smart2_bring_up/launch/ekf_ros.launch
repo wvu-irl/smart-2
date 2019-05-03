@@ -1,0 +1,18 @@
+ <launch>
+  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+    <param name="output_frame" value="odometry"/>
+    <param name="freq" value="30.0"/>
+    <param name="sensor_timeout" value="5.0"/>
+    <param name="odom_used" value="true"/>
+    <param name="imu_used" value="true"/>
+    <param name="vo_used" value="false"/>
+    <param name="debug" value="false"/>
+    <param name="self_diagnose" value="false"/>
+
+    <param name="base_footprint_frame" value="smart2_01/base_footprint"/>
+    <remap from="odom" to="/smart2_01/odom" />
+    <remap from="imu_data" to="/smart2_01/new_imu" />
+  </node>
+ </launch>
+
+

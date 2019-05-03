@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_name" default="" />
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find smart2_description)/urdf/create_1.urdf.xacro'" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" >
+    <param name="tf_prefix" value="$(arg robot_name)"/>
+   </node>
+</launch>
