@@ -1,0 +1,21 @@
+plugin_names: 
+    {
+        SMART_Board_serial : hw_interface_plugin_SMART_Board,
+    }
+    
+SMART_Board_serial:
+    {
+        SMART_Board : "SMART_Board",
+    }
+    
+SMART_Board:
+    {
+        deviceName         : "/dev/ttyUSB1",
+        baudrate           : 115200,
+        subscribeToTopic   : "/example/subscribe",
+        imuTopic           : "/imu/data",
+        magTopic           : "/mag/data",
+        tempTopic          : "/temp/data",
+    }
+
+

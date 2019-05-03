@@ -1,0 +1,23 @@
+<!-- This is the launch file for the hw_interface node ONLY!!!-->
+<!-- DO NOT EDIT -->
+
+<launch>
+
+    <rosparam
+                command="load"
+                file="$(find hw_interface)/config/SMART_Board_Serial_launch_params.yaml"
+                subst_value="true"
+		ns = "hw_interface"
+    />
+
+	<node name = "hw_interface"
+		pkg = "hw_interface"
+		type = "hw_interface_node"
+		output="screen"
+		ns = "hw_interface"
+
+		respawn="true"
+		respawn_delay = "10"
+	/>
+
+</launch>
