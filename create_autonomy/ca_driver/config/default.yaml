@@ -1,5 +1,5 @@
 # The device path for the robot
-dev: "/dev/ttyUSB0"
+dev: "/dev/serial/by-id/usb-9710_7840-if00-port1"
 
 # Baud rate. Passing this parameter overwrites the inferred value based on the robot_model
 baud: 57600

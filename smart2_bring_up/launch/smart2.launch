@@ -2,7 +2,7 @@
   <group ns="smart2_01">
 
     <include file="$(find hls_lfcd_lds_driver)/launch/hlds_laser.launch">
-	<arg name="dev" value="/dev/ttyUSB2"/>
+	<arg name="dev" value="/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0"/>
 	<arg name="laser_frame" value="/smart2_01/base_scan"/>
     </include>
 

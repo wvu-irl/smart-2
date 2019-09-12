@@ -10,7 +10,7 @@ SMART_Board_serial:
     
 SMART_Board:
     {
-        deviceName         : "/dev/ttyUSB1",
+        deviceName         : "/dev/serial/by-id/usb-9710_7840-if00-port0",
         baudrate           : 115200,
         subscribeToTopic   : "/example/subscribe",
         imuTopic           : "/smart2_01/imu/data",
