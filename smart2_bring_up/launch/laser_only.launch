@@ -1,0 +1,18 @@
+<launch>
+
+    <include file="$(find hls_lfcd_lds_driver)/launch/hlds_laser.launch">
+	<arg name="dev" value="/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0"/>
+	<arg name="laser_frame" value="/smart2_01/base_scan"/>
+    </include>
+
+
+    <include file="$(find smart2_description)/launch/smart2_description.launch">
+	<arg name="robot_name" value="smart2_01"/>
+    </include>
+
+
+   <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="-0.05 0 0.18 0 0 0 1 /smart2_01/base_link /smart2_01/base_scan 100" />
+   <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster" args="0.12 0 0.125 0.5 -0.5 0.5 -0.5 /smart2_01/base_link /smart2_01/camera_link 100" />
+
+</launch>
+
